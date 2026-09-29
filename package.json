@@ -5,13 +5,12 @@
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haneoka-gakuen/haneoka.git",
-    "directory": "packages/design-tokens"
+    "url": "git+https://github.com/haneoka-gakuen/design-tokens.git"
   },
   "bugs": {
-    "url": "https://github.com/haneoka-gakuen/haneoka/issues"
+    "url": "https://github.com/haneoka-gakuen/design-tokens/issues"
   },
-  "homepage": "https://github.com/haneoka-gakuen/haneoka/tree/main/packages/design-tokens#readme",
+  "homepage": "https://github.com/haneoka-gakuen/design-tokens#readme",
   "type": "module",
   "sideEffects": [
     "./src/tokens.css",
@@ -40,10 +39,13 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "prepack": "pnpm build"
+    "prepack": "pnpm build",
+    "generate": "node scripts/generate-schemes.mjs"
   },
   "devDependencies": {
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "@material/material-color-utilities": "0.3.0",
+    "prettier": "3.9.4"
   },
   "publishConfig": {
     "access": "public",
@@ -51,5 +53,6 @@
   },
   "engines": {
     "node": ">=20"
-  }
+  },
+  "packageManager": "pnpm@11.14.0"
 }
